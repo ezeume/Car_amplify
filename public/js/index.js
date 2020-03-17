@@ -4,6 +4,29 @@ var $exampleDescription = $("#example-description");
 var $submitBtn = $("#submit");
 var $exampleList = $("#example-list");
 
+$('#searchButton').on('click', function(event){
+  event.preventDefault();
+  // var searchValue1 = document.getElementById('').value;
+  // var searchValue2 = document.getElementById('').value;
+  // var searchValue3 = document.getElementById('').value;
+  var searchValue1 = '2019';
+  var searchValue2 = 'Toyota';
+  var searchValue3 = 'Corolla';
+  var carQueryURL = `https://vpic.nhtsa.dot.gov/api/vehicles/GetCanadianVehicleSpecifications/?Year=${searchValue1}&Make=${searchValue2}&Model=${searchValue3}&units=US&format=json`;
+  //var seachButton = $('');
+  console.log(carQueryURL);
+
+  $.ajax({
+    url: carQueryURL,
+    method: 'GET',
+  }).then(function (results){
+    //console.log(results);
+    //console.log(carQueryURL);
+  });
+
+  
+});
+
 // The API object contains methods for each kind of request we'll make
 var API = {
   saveExample: function(example) {
