@@ -1,3 +1,35 @@
 .list-group-item {
   line-height: 2.5;
 }
+
+.carInfoDiv, .previousSearchesList {
+  border: solid;
+  border-color: black;
+  border-width: 2px;
+  height: 400px;
+  overflow-y: auto;
+}
+
+.carListItem {
+  margin: 2px;
+  padding: 10px;
+  border-bottom: dotted;
+  border-color: grey;
+  border-width: 2px;
+}
+
+.yearAndModelDiv{
+  font-size: 18px;
+  font-weight: 534;
+}
+
+.previousSearchLi{
+
+  margin: 2px;
+  text-decoration: underline;
+  margin-top: 16px;
+
+
+
+
+}

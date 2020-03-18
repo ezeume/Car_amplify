@@ -6,19 +6,11 @@ module.exports = function (app) {
     res.render("home");
   });
 
-  // app.get("/signup", function(req, res) {
-  //   db.Car.findOne({ where: { id: req.params.id } }).then(function(car_db) {
-  //     res.render("signup", {
-  //       cars: car_db
-  //     });
-  //   });
-  // });
-
   app.get("/signup", function (req, res) {
 
     res.render("signup");
   });
-  
+
 
   // Load example page and pass in an example by id
   app.get("/signin", function (req, res) {
