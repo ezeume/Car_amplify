@@ -19,8 +19,16 @@ $('#searchButton').on('click', function(event){
   $.ajax({
     url: carQueryURL,
     method: 'GET',
-  }).then(function (results){
-    //console.log(results);
+  }).then(function (data){
+    console.log(data);
+    var newVar = data.Results[0];
+    console.log(newVar);
+    
+    var make = newVar.Specs[0].Value;
+    var model = newVar.Specs[1].Value;
+    
+    console.log(make);
+    console.log(model);
     //console.log(carQueryURL);
   });
 
