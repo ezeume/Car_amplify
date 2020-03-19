@@ -147,6 +147,34 @@ $('#searchButton').on('click', function (event) {
       previousSearchLi.append(previousSearchDiv, redoBtn)
       $(".previousSearchesList").append(previousSearchLi)
     });
+
+
+    // var make = $("#make")
+    // console.log("make", make)
+    // var model = document.getElementById('model').value;
+
+      $(".carmakeimage").empty();
+      picture = "audir8"
+      console.log(picture)
+      const corsHelp = "https://cors-anywhere.herokuapp.com/"
+      let otherKey = "9760a4c7d4d94a39b2ff9055fbe79c30";
+      $.ajax({
+          url: corsHelp + "https://api.cognitive.microsoft.com/bing/v7.0/images/search?q=" + picture,
+          method: "GET",
+          beforeSend: function (xhr) { xhr.setRequestHeader("Ocp-Apim-Subscription-Key", otherKey); }
+          // https://stackoverflow.com/questions/3258645/pass-request-headers-in-a-jquery-ajax-get-call
+      }).then((response) => {
+        console.log(response)
+        var imgSrc = response.value[0].thumbnailUrl
+        let img = document.querySelector("img")
+        console.log(imgSrc)
+        img.setAttribute("src", imgSrc)
+          // let imgSrc = (response.value[0].thumbnailUrl)
+          // let img = document.querySelector("img")
+          // img.setAttribute("src", imgSrc)
+          // img.setAttribute("style", "max-height:178.3px;max-width:308px;min-height:178.3px;min-width:308px")
+      })
+
   }
 });
 
@@ -159,8 +187,8 @@ $('#resetBtn').on('click', function (event) {
   $(".model").val("");
 })
 
+//redo button
 $(document).on('click', ".redoButton", function (event) {
-  event.preventDefault();
   var year = document.getElementById('year').value;
   console.log("year", year)
 
@@ -271,5 +299,33 @@ $(document).on('click', ".redoButton", function (event) {
       previousSearchLi.append(previousSearchDiv, redoBtn)
       $(".previousSearchesList").append(previousSearchLi)
     });
+
+
+    // var make = $("#make")
+    // console.log("make", make)
+    // var model = document.getElementById('model').value;
+
+      $(".carmakeimage").empty();
+      picture = "audir8"
+      console.log(picture)
+      const corsHelp = "https://cors-anywhere.herokuapp.com/"
+      let otherKey = "9760a4c7d4d94a39b2ff9055fbe79c30";
+      $.ajax({
+          url: corsHelp + "https://api.cognitive.microsoft.com/bing/v7.0/images/search?q=" + picture,
+          method: "GET",
+          beforeSend: function (xhr) { xhr.setRequestHeader("Ocp-Apim-Subscription-Key", otherKey); }
+          // https://stackoverflow.com/questions/3258645/pass-request-headers-in-a-jquery-ajax-get-call
+      }).then((response) => {
+        console.log(response)
+        var imgSrc = response.value[0].thumbnailUrl
+        let img = document.querySelector("img")
+        console.log(imgSrc)
+        img.setAttribute("src", imgSrc)
+          // let imgSrc = (response.value[0].thumbnailUrl)
+          // let img = document.querySelector("img")
+          // img.setAttribute("src", imgSrc)
+          // img.setAttribute("style", "max-height:178.3px;max-width:308px;min-height:178.3px;min-width:308px")
+      })
+
   }
 });
