@@ -5,24 +5,7 @@ module.exports = function (app) {
   app.get("/", function (req, res) {
     res.render("home");
   });
-
-  app.get("/signup", function (req, res) {
-
-    res.render("signup");
-  });
-
-
-  // Load example page and pass in an example by id
-  app.get("/signin", function (req, res) {
-
-    res.render("signin")
-  });
-
-  app.get("/mygarage", function (req, res) {
-
-    res.render("mygarage")
-  });
-
+  
   // Render 404 page for any unmatched routes
   app.get("*", function (req, res) {
     res.render("404");
