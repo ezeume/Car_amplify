@@ -1,62 +1,138 @@
-<nav>
+<nav class="green lighten-2">
   <div class="nav-wrapper">
-    <a href="#" class="brand-logo center">Car App</a>
+    <a href="#" class="brand-logo center">Car Amplify</a>
     <ul id="nav-mobile" class="left hide-on-med-and-down">
     </ul>
   </div>
 </nav>
-<div class="container">
-  <div class="row">
-    <h1 class="col s12 center">Welcome to our Car App!</h1>
-    <h5 class="col s6 center">Find a Car</h5>
-    <div class="row">
-      <select class="col s2 browser-default">
-        <option value="" disabled selected>Year</option>
-        <option value="1">2019</option>
-        <option value="2">2018</option>
-        <option value="3">2017</option>
-      </select>
-      <select class="col s2 browser-default">
-        <option value="" disabled selected>Make</option>
-        <option value="1">Option 1</option>
-        <option value="2">Option 2</option>
-        <option value="3">Option 3</option>
-      </select>
-      <select class="col s2 browser-default">
-        <option value="" disabled selected>Model</option>
-        <option value="1">Option 1</option>
-        <option value="2">Option 2</option>
-        <option value="3">Option 3</option>
-      </select>
+
+<div id="index-banner" class="parallax-container">
+  <div class="section no-pad-bot">
+    <div class="container">
+      <br><br>
+      <h1 class="header center green-text text-lighten-2">Welcome to Car Amplify!</h1>
+      <div class="row center">
+        <h3>Description</h3>
+        <p class="light">Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem neque cum fuga illo? Veritatis
+          ut
+          veniam omnis quas ex, similique quos nulla provident nesciunt dolor, error eos vitae sed modi. Lorem, ipsum
+          dolor sit amet consectetur adipisicing elit. Impedit tempore, dolores vitae similique vero soluta voluptatum
+          magni asperiores ea distinctio accusamus perspiciatis fugit aperiam porro itaque harum cumque, provident fuga.
+        </p>
+      </div>
     </div>
-
-    <div class="row">
-
-
-      <div class="col s6 searchList">
-      <h3>Previous searches </h3>
-      <ul>
-
-        <li>previous search 1 </li>
-        <li>previous search 2 </li>
-        <li>previous search 3 </li>
-      </ul>
+    <div class="parallax"><img id="ferrari" src="/styles/ferrari.jpg" alt="Red ferrari">
     </div>
-
-
-  <div class="col s6 carInfoBox">
-     <H3>car info</H3>
-    <ul>
-
-        <li>ca info 1 </li>
-        <li>ca info 2 </li>
-        <li>ca info 3 </li>
-      </ul>
-    </div>
-
-
-    </div>
-
-    </section>
   </div>
 </div>
+
+<div class="row">
+</div>
+
+  <div id="findACar" class="container">
+    <div class="row center">
+      <div class="input-field col s12">
+        <h3 id="findCar" class="col s12">Find a Car</h3>
+        <br>
+        <div class="col s12 m4">
+          <div class="icon-block">
+            <h2 class="center brown-text"><i class="material-icons">keyboard_arrow_down</i></h2>
+            <h5 class="center">Enter the car's Make</h5>
+
+            <select class="browser-default">
+              <option value="" disabled selected>Make</option>
+              <option value="1">Option 1</option>
+              <option value="2">Option 2</option>
+              <option value="3">Option 3</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="col s12 m4">
+          <div class="icon-block">
+            <h2 class="center brown-text"><i class="material-icons">keyboard_arrow_down</i></h2>
+            <h5 class="center">Enter the car's Model</h5>
+
+            <select class="browser-default">
+              <option value="" disabled selected>Model</option>
+              <option value="1">Option 1</option>
+              <option value="2">Option 2</option>
+              <option value="3">Option 3</option>
+            </select>
+            <button class="btn waves-effect waves-light green lighten-2" type="submit" name="action">Go!
+              <i class="material-icons right">send</i>
+            </button>
+          </div>
+        </div>
+
+        <div class="col s12 m4">
+          <div class="icon-block">
+            <h2 class="center brown-text"><i class="material-icons">done</i></h2>
+            <h5 class="center">Enter the car's Year</h5>
+
+            <select class="browser-default">
+              <option value="" disabled selected>Year</option>
+              <option value="1">Option 1</option>
+              <option value="2">Option 2</option>
+              <option value="3">Option 3</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="row">
+</div>
+
+  <section id="prevSearches" class="container center">
+    <div class="section">
+      <div class="row">
+        <div class="col s6 m4">
+          <div class="icon-block">
+            <h2 class="center brown-text"><i class="material-icons">search</i></h2>
+            <h5 class="center">Previous Searches</h5>
+
+            <ul>
+
+              <li id="search1"> Previous Search 1 </li>
+              <li id="search2"> Previous Search 2 </li>
+              <li id="search3"> Previous Search 3 </li>
+            </ul>
+          </div>
+        </div>
+        <div id="carInfo" class="col s6 m8 center">
+          <div class="icon-block">
+            <h2 class="center brown-text"><i class="material-icons">info</i></h2>
+            <h5 class="center">Car Info</h5>
+
+            <ul>
+
+              <li id="carName">Name: </li>
+              <li id="carYear">Year: </li>
+              <li id="carModel">Model: </li>
+              <li id="carMake">Make: </li>
+              <li id="carSpecs">Specs: </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="page-footer green lighten-2">
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12">
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container">
+        © 2020 Car Amplify
+        <a class="grey-text text-lighten-4 right" href="https://github.com/cfech/NewProject2">Link to GitHub
+          Repository</a>
+      </div>
+    </div>
+  </footer>
