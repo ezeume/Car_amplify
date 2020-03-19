@@ -2,11 +2,13 @@
   line-height: 2.5;
 }
 
-.carInfoDiv, .previousSearchesList {
+.carInfoDiv {
   border: solid;
   border-color: black;
   border-width: 2px;
-  height: 400px;
+  height: auto;
+  max-height: 500px;
+  
   overflow-y: auto;
 }
 
@@ -28,8 +30,19 @@
   margin: 2px;
   text-decoration: underline;
   margin-top: 16px;
+}
+.pictureDiv
+{
+  height: auto;
 
+  
+}
 
-
-
+.previousSearchesList{
+border: solid;
+  border-color: black;
+  border-width: 2px;
+  max-height: 216px;
+  height: auto;
+  overflow-y: auto;
 }
