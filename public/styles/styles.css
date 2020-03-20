@@ -18,13 +18,20 @@ footer {
 /* background-size: cover;
   z-index: -1; } */
 
-#ferrari {
-  opacity: 4;
-  background: transparent;
+.container {
+  background: url(https://www.owa.de/storage/2018/11/Merzedes-Benz-Niederlassung_Nuernberg.jpg)
+    50% no-repeat;
+  background-size: 100%;
+  background-attachment: fixed;
 }
 
+/* #ferrari {
+  opacity: 4;
+  background: transparent;
+} */
+
 #index-banner {
-  max-height:400px;
+  max-height: 400px;
   /* background: transparent; */
 }
 
@@ -78,14 +85,24 @@ h3 {
   font-size: 30px;
 }
 
-#prevSearches {
-  padding: 15px 15px;
-  margin: auto;
-  border-radius: 5px black;
+#description {
+  font-size: 40px;
+  color: white;
 }
+
 #carInfo {
-  background: white;
+  border: solid;
+  border-color: black;
+  border-width: 2px;
+  height: auto;
+  max-height: 500px;
+  overflow-y: auto;
+}
+
+#prevSearches {
   margin: auto;
+  text-decoration: underline;
+  background: white;
   padding: 20px 20px;
 }
 
