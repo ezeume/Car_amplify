@@ -4,7 +4,7 @@ module.exports = function (app) {
   app.get("/api/examples", function (req, res) {
      //console.log(db);
      db.Make.findAll({}).then(function (makedata) {
-      console.log(makedata);
+      // console.log(makedata);
       res.json(makedata);
     })
   });
@@ -15,4 +15,24 @@ module.exports = function (app) {
       res.json(modeldata);
     })
   });
+  app.post("/api/examples", function(req, res){
+    console.log('api example route fired')
+    // console.log(req.body)
+    db.PastSearch.create({
+      year: req.body.year,
+      make: req.body.make,
+      model: req.body.model
+    }).then(function(dbPastSearch){
+      res.json(dbPastSearch)
+    })
+  });
+  app.get("/api/searches", function (req, res) {
+    //console.log(db);
+    console.log('trying to search')
+    db.PastSearch.findAll({}).then(function (pastsearch) {
+    console.log('trying to search')
+     console.log(pastsearch);
+     res.json(pastsearch);
+   })
+ });
 }

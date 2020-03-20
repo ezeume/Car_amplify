@@ -1,7 +1,4 @@
-// $(document).ready(function(){
-//   $('.parallax').parallax();
-// });
-
+loadAjax();
 var id;
 $.ajax({
   url: "/api/examples/",
@@ -32,6 +29,23 @@ $.ajax({
     });
   });
 });
+function loadAjax() {
+  console.log('in ajax function')
+  $.ajax({
+    url: "/api/searches",
+    method: 'GET'
+  }).then(function (data1) {
+    for (let i = 0; i < data1.length; i++) {
+      var previousSearchLi = $("<li>").addClass("previousSearchLi")
+      var previousSearchDiv = $("<div>").addClass("previousSearchDiv")
+      previousSearchDiv.text("Year: " + data1[i].year + " Make: " + data1[i].make + " Model: " + data1[i].model)
+      var redoBtn = $("<button>").addClass("redoButton")
+      redoBtn.text("redo")
+      previousSearchLi.append(previousSearchDiv, redoBtn)
+      $(".previousSearchesList").append(previousSearchLi)
+    }
+  });
+}
 
 $("#date").text(moment().format("dddd, MMMM Do YYYY"));
 
@@ -40,7 +54,7 @@ $('#searchButton').on('click', function (event) {
   var year = document.getElementById('year').value;
   console.log("year", year)
 
-  var make = $("#make")
+  var make = $("#make option:selected").text()
   console.log("make", make)
   var model = document.getElementById('model').value;
   console.log("model", model)
@@ -147,6 +161,18 @@ $('#searchButton').on('click', function (event) {
       previousSearchLi.append(previousSearchDiv, redoBtn)
       $(".previousSearchesList").append(previousSearchLi)
     });
+    console.log('about to make ajax call')
+    $.ajax({
+      url: "/api/examples",
+      method: "POST",
+      data: {
+        make,
+        model,
+        year
+      }
+    }).then(function () {
+      console.log('saved successful')
+    })
   }
 });
 
