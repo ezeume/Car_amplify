@@ -187,7 +187,7 @@ $('#searchButton').on('click', function (event) {
 
     //ajax call to send make model and year to backend
     $.ajax({
-      url: "http://localhost:3000/api/examples",
+      url: "/api/examples",
       method: "POST",
       data: {
         make,
