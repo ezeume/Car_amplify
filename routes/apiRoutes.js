@@ -6,11 +6,13 @@ module.exports = function (app) {
       res.json(makedata);
     })
   });
+  //Get specific models
   app.get("/api/examples/:id", function (req, res) {
     db.Model.findAll({ where: { makeId: req.params.id } }).then(function (modeldata) {
       res.json(modeldata);
     })
   });
+  //Post previous search item
   app.post("/api/examples", function (req, res) {
     db.PastSearch.create({
       year: req.body.year,
@@ -20,6 +22,7 @@ module.exports = function (app) {
       res.json(dbPastSearch)
     })
   });
+  //Get search items
   app.get("/api/searches", function (req, res) {
     db.PastSearch.findAll({}).then(function (pastsearch) {
       res.json(pastsearch);
