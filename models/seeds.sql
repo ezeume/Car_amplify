@@ -1,4 +1,4 @@
-INSERT INTO makes(name)
+INSERT INTO Makes(name)
 VALUES("Acura"),("Alfa Romeo"),("Aston Martin"),
 ("BMW"),("Buick"),("Cadillac"),
 ("Chevrolet"),("Chrysler"),("Dodge"),("Ferrari"),
@@ -8,7 +8,7 @@ VALUES("Acura"),("Alfa Romeo"),("Aston Martin"),
 ("Rolls Royce"),("Subaru"),("Tesla"),("Toyota"),
 ("Volkswagen"),("Volvo");
 
-INSERT INTO models(name, makeId)
+INSERT INTO Models(name, makeId)
 VALUES("ILX", 1),("RDX", 1),("RLX", 1),("MDX", 1),
 ("NSX", 1),("TLX", 1),("Spider", 2),("Stelvio", 2),
 ("DB11", 3),("Vantage", 3),("Flying Spur", 3),("230i", 4),
