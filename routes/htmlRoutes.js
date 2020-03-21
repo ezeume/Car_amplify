@@ -6,6 +6,7 @@ module.exports = function (app) {
     res.render("hometest");
   });
 
+  //Load 404 page if error
   app.get("*", function (req, res) {
     res.render("404");
   });
