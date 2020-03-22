@@ -47,7 +47,7 @@ function loadAjax() {
       previousSearchDiv.text("Year: " + data1[i].year + " Make: " + data1[i].make + " Model: " + data1[i].model)
       // var redoBtn = $("<button>").addClass("redoButton")
       // redoBtn.text("redo")
-      previousSearchLi.append(previousSearchDiv,)
+      previousSearchLi.append(previousSearchDiv)
       $(".previousSearchesList").append(previousSearchLi)
     }
   });
@@ -79,7 +79,7 @@ $('#searchButton').on('click', function (event) {
       $(".carInfoDiv").empty()
       var arrayLength = data.Results.length
       let j = 1
-      
+
       //for loop to create car info div
       for (let i = 0; i < arrayLength; i++) {
         let itemId = j++
@@ -198,7 +198,7 @@ $('#searchButton').on('click', function (event) {
 
     //Ajax call for getting car picture with bing api
     $(".carmakeimage").empty();
-    picture = make + model +"20"+year
+    picture = make + model + "20" + year
     const cors_anywhere = "https://cors-anywhere.herokuapp.com/"
     let otherKey = "9760a4c7d4d94a39b2ff9055fbe79c30";
     $.ajax({
