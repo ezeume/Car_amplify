@@ -28,4 +28,12 @@ module.exports = function (app) {
       res.json(pastsearch);
     })
   });
+app.delete("/api/delete", function(req, res){
+  db.PastSearch.destroy({
+    where:{},
+    truncate: true
+  }).then(function(){
+    res.end()
+  });
+});
 }

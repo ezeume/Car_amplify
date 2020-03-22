@@ -6,34 +6,30 @@
   </div>
 </nav>
 
-<main class="container">
-  <div id="index-banner">
-    <div class="section">
-      <br><br>
-      <h1 class="header center green-text text-lighten-2">Welcome to Car Amplify!</h1>
-      <div class="row center">
-        <h3 id="description">Description</h3>
-        <p class="light">Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem neque cum fuga illo? Veritatis
-          ut
-          veniam omnis quas ex, similique quos nulla provident nesciunt dolor, error eos vitae sed modi. Lorem, ipsum
-          dolor sit amet consectetur adipisicing elit. Impedit tempore, dolores vitae similique vero soluta voluptatum
-          magni asperiores ea distinctio accusamus perspiciatis fugit aperiam porro itaque harum cumque, provident fuga.
-        </p>
-      </div>
-    </div>
+<div id="index-banner" class="container">
+  <div class="row center">
+    <h1 class="header center green-text text-lighten-2">Welcome to Car Amplify!</h1>
+    <h3 id="date" class="center"></h3>
   </div>
+  <div class="row center">
+    <h4 id="description">How do I use it?</h4>
+    <p class="dark">Whether you're a car novice or car enthuanist, Car Amplify helps you discover information about any car you could think of! To ride off into the sunset, simply enter a car's make, model, and year from the menus below and viola!
+    </p>
+  </div>
+</div>
+</div>
 
-  <div id="findACar" class="container">
+<div class="container">
+  <div id="findACar">
     <div class="row center">
       <div class="input-field col s12">
-        <h3 id="findCar" class="col s12">Find a Car</h3>
-        <h5 id="date" class="center"></h5>
+        <h2 id="findCar" class="col s12 green-text text-lighten-2">Find a Car</h2>
         <br>
         <div class="col s12 m4">
           <div class="icon-block">
-            <h2 class="center brown-text"><i class="material-icons">keyboard_arrow_down</i></h2>
+            <h2 class="center brown-text"><i class="large material-icons">directions_car</i></h2>
             <h5 class="center">Enter the car's Make</h5>
-            <select id="make" class="browser-default">
+            <select id="make" class="browser-default make">
               <option value="" disabled selected>Make</option>
             </select>
           </div>
@@ -41,24 +37,27 @@
 
         <div class="col s12 m4">
           <div class="icon-block">
-            <h2 class="center brown-text"><i class="material-icons">keyboard_arrow_down</i></h2>
+            <h2 class="center brown-text"><i class="large material-icons">directions_car</i></h2>
             <h5 class="center">Enter the car's Model</h5>
-            <select id="model" class="browser-default">
+            <select id="model" class="browser-default model">
               <option value="" disabled selected>Model</option>
             </select>
             <button id="searchButton" class="btn waves-effect waves-light green lighten-2" type="submit"
-              name="action">Go!
-              <i class="material-icons right">send</i>
+              name="action center">Go!
+              <i class="medium material-icons right">send</i>
             </button>
-            <button id="resetBtn" type="reset" class="searchButton">reset</button>
+            <button id="resetBtn" class="btn waves-effect waves-light green lighten-2" type="submit"
+              name="action center">Reset
+              <i class="material-icons right">history</i>
+            </button>
           </div>
         </div>
 
         <div class="col s12 m4">
           <div class="icon-block">
-            <h2 class="center brown-text"><i class="material-icons">done</i></h2>
+            <h2 class="center brown-text"><i class="large material-icons">directions_car</i></h2>
             <h5 class="center">Enter the car's Year</h5>
-            <select id="year" class="browser-default">
+            <select id="year" class="browser-default year">
               <option value="" disabled selected>Year</option>
               <option value="2020">2020</option>
               <option value="2019">2019</option>
@@ -97,26 +96,24 @@
       </div>
     </div>
   </div>
+</div>
 
-  <div class="row">
-    <div class="col s6 searchList">
-      <h3>Previous searches </h3>
-      <div class="pictureDiv">
-        <img src="">
-      </div>
-      <ol class="previousSearchesList">
-      </ol>
+<div class="row">
+  <div id="prevSearches" class="col s6 searchList">
+    <h3>PREVIOUS SEARCHES</h3>
+    <div class="pictureDiv">
+      <img src="">
     </div>
-    <div class="col s6 carInfoBox">
-      <H3>Car Info</H3>
-      <div class="carInfoDiv">
-      </div>
+    <ol class="previousSearchesList">
+    </ol>
+
+  </div>
+  <div id="carInfo" class="col s6 carInfoBox">
+    <h3>CAR INFO</h3>
+    <div class="carInfoDiv">
     </div>
   </div>
-  </section>
-  </div>
-  </div>
-</main>
+</div>
 
 <footer class="page-footer green lighten-2">
   <div class="container">
