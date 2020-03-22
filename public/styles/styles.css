@@ -19,23 +19,23 @@
   border-width: 2px;
 }
 
-.yearAndModelDiv{
+.yearAndModelDiv {
   font-size: 18px;
   font-weight: 534;
 }
 
-.previousSearchLi{
+.previousSearchLi {
   margin: 2px;
   text-decoration: underline;
   margin-top: 16px;
 }
-.pictureDiv
-{
-  height: auto; 
+
+.pictureDiv {
+  height: auto;
 }
 
-.previousSearchesList{
-border: solid;
+.previousSearchesList {
+  border: solid;
   border-color: black;
   border-width: 2px;
   max-height: 216px;
@@ -43,7 +43,7 @@ border: solid;
   overflow-y: auto;
 }
 
-img{
-  width: 800px;
+img {
+  width: 700px;
   height: auto;
 }
