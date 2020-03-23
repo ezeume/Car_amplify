@@ -1,132 +1,139 @@
-<nav class="green lighten-2">
-  <div class="nav-wrapper">
-    <a href="#" class="brand-logo center">Car Amplify</a>
-    <ul id="nav-mobile" class="left hide-on-med-and-down">
-    </ul>
-  </div>
-</nav>
+<body class="indexBody">
 
-<div id="index-banner" class="container">
-  <div class="row center">
-    <h1 class="header center green-text text-lighten-2">Welcome to Car Amplify!</h1>
-    <h3 id="date" class="center"></h3>
-  </div>
-  <div class="row center">
-    <h4 id="description">How do I use it?</h4>
-    <p class="dark">Whether you're a car novice or car enthusiast, Car Amplify helps you discover information about a wide selection of cars in our database! To enhance your car knowledge, simply enter a car's make, model, and year from the menus below and detailed technical specs will be presented to you. 
-    </p>
-  </div>
-</div>
-</div>
+  <!--Nav bar -->
+  <nav class="green lighten-2">
+    <div class="nav-wrapper">
+      <a href="#" class="brand-logo center">Car Amplify</a>
+      <ul id="nav-mobile" class="left hide-on-med-and-down">
+      </ul>
+    </div>
+  </nav>
 
-<div class="container">
-  <div id="findACar">
+  <!--Description and date container-->
+  <div id="index-banner" class="container">
     <div class="row center">
-      <div class="input-field col s12">
-        <h2 id="findCar" class="col s12 green-text text-lighten-2">Find a Car</h2>
-        <br>
-        <div class="col s12 m4">
-          <div class="icon-block">
-            <h2 class="center brown-text"><i class="large material-icons">directions_car</i></h2>
-            <h5 class="center">Enter the car's Make</h5>
-            <select id="make" class="browser-default make">
-              <option value="" disabled selected>Make</option>
-            </select>
-          </div>
-        </div>
-
-        <div class="col s12 m4">
-          <div class="icon-block">
-            <h2 class="center brown-text"><i class="large material-icons">directions_car</i></h2>
-            <h5 class="center">Enter the car's Model</h5>
-            <select id="model" class="browser-default model">
-              <option value="" disabled selected>Model</option>
-            </select>
-            <button id="searchButton" class="btn waves-effect waves-light green lighten-2" type="submit"
-              name="action center">Go!
-              <i class="medium material-icons right">send</i>
-            </button>
-            <button id="resetBtn" class="btn waves-effect waves-light green lighten-2" type="submit"
-              name="action center">Reset
-              <i class="material-icons right">history</i>
-            </button>
-          </div>
-        </div>
-
-        <div class="col s12 m4">
-          <div class="icon-block">
-            <h2 class="center brown-text"><i class="large material-icons">directions_car</i></h2>
-            <h5 class="center">Enter the car's Year</h5>
-            <select id="year" class="browser-default year">
-              <option value="" disabled selected>Year</option>
-              <option value="2020">2020</option>
-              <option value="2019">2019</option>
-              <option value="2018">2018</option>
-              <option value="2017">2017</option>
-              <option value="2016">2016</option>
-              <option value="2015">2015</option>
-              <option value="2014">2014</option>
-              <option value="2013">2013</option>
-              <option value="2012">2012</option>
-              <option value="2011">2011</option>
-              <option value="2010">2010</option>
-              <option value="2009">2009</option>
-              <option value="2008">2008</option>
-              <option value="2007">2007</option>
-              <option value="2006">2006</option>
-              <option value="2005">2005</option>
-              <option value="2004">2004</option>
-              <option value="2003">2003</option>
-              <option value="2002">2002</option>
-              <option value="2001">2001</option>
-              <option value="2000">2000</option>
-              <option value="1999">1999</option>
-              <option value="1998">1998</option>
-              <option value="1997">1997</option>
-              <option value="1996">1996</option>
-              <option value="1995">1995</option>
-              <option value="1994">1994</option>
-              <option value="1993">1993</option>
-              <option value="1992">1992</option>
-              <option value="1991">1991</option>
-              <option value="1990">1990</option>
-            </select>
-          </div>
-        </div>
-      </div>
+      <h1 class="header center green-text text-lighten-2">Welcome to Car Amplify!</h1>
+      <h3 id="date" class="center"></h3>
+    </div>
+    <div class="row center">
+      <h4 id="description">How do I use it?</h4>
+      <p class="dark">Whether you are a car novice or car enthusiast, Car Amplify helps you discover information about a
+        wide selection of cars in our database! To enhance your car knowledge, simply enter a car's make, model, and
+        year from the menus below and detailed technical specs will be presented to you.
+      </p>
     </div>
   </div>
-</div>
-
-<div class="row">
-  <div id="prevSearches" class="col s6 searchList">
-    <h3>PREVIOUS SEARCHES</h3>
-    <div class="pictureDiv">
-      <img src="">
-    </div>
-    <ol class="previousSearchesList">
-    </ol>
-
   </div>
-  <div id="carInfo" class="col s6 carInfoBox">
-    <h3>CAR INFO</h3>
-    <div class="carInfoDiv">
-    </div>
-  </div>
-</div>
 
-<footer class="page-footer green lighten-2">
+  <!--User input row-->
   <div class="container">
-    <div class="row">
-      <div class="col l6 s12">
+    <div id="findACar">
+      <div class="row center">
+        <div class="input-field col s12">
+          <h2 id="findCar" class="col s12 green-text text-lighten-2">Find a Car</h2>
+          <br>
+          <div class="col s12 m4">
+            <div class="icon-block">
+              <h2 class="center brown-text"><i class="large material-icons">directions_car</i></h2>
+              <h5 class="center">Enter Make</h5>
+              <select id="make" class="browser-default make">
+                <option value="" disabled selected>Make</option>
+              </select>
+            </div>
+          </div>
+          <div class="col s12 m4">
+            <div class="icon-block">
+              <h2 class="center brown-text"><i class="large material-icons">directions_car</i></h2>
+              <h5 class="center">Enter Model</h5>
+              <select id="model" class="browser-default model">
+                <option value="" disabled selected>Model</option>
+              </select>
+              <button id="searchButton" class="btn waves-effect waves-light green lighten-2" type="submit"
+                name="action center">Go!
+                <i class="medium material-icons right">send</i>
+              </button>
+              <button id="resetBtn" class="btn waves-effect waves-light green lighten-2" type="submit"
+                name="action center">Reset
+                <i class="material-icons right">history</i>
+              </button>
+            </div>
+          </div>
+          <div class="col s12 m4">
+            <div class="icon-block">
+              <h2 class="center brown-text"><i class="large material-icons">directions_car</i></h2>
+              <h5 class="center">Enter Year</h5>
+              <select id="year" class="browser-default year">
+                <option value="" disabled selected>Year</option>
+                <option value="2020">2020</option>
+                <option value="2019">2019</option>
+                <option value="2018">2018</option>
+                <option value="2017">2017</option>
+                <option value="2016">2016</option>
+                <option value="2015">2015</option>
+                <option value="2014">2014</option>
+                <option value="2013">2013</option>
+                <option value="2012">2012</option>
+                <option value="2011">2011</option>
+                <option value="2010">2010</option>
+                <option value="2009">2009</option>
+                <option value="2008">2008</option>
+                <option value="2007">2007</option>
+                <option value="2006">2006</option>
+                <option value="2005">2005</option>
+                <option value="2004">2004</option>
+                <option value="2003">2003</option>
+                <option value="2002">2002</option>
+                <option value="2001">2001</option>
+                <option value="2000">2000</option>
+                <option value="1999">1999</option>
+                <option value="1998">1998</option>
+                <option value="1997">1997</option>
+                <option value="1996">1996</option>
+                <option value="1995">1995</option>
+                <option value="1994">1994</option>
+                <option value="1993">1993</option>
+                <option value="1992">1992</option>
+                <option value="1991">1991</option>
+                <option value="1990">1990</option>
+              </select>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
-  <div class="footer-copyright">
-    <div class="container">
-      © 2020 Car Amplify
-      <a class="grey-text text-lighten-4 right" href="https://github.com/cfech/NewProject2">Link to GitHub
-        Repository</a>
+
+  <!--Previous search and image row-->
+  <div class="row">
+    <div id="prevSearches" class="col l6 m9 s12 searchList">
+      <h3 class="U">Previous Searches</h3>
+      <div class="pictureDiv ">
+        <img class="responsive-img square" src="">
+      </div>
+      <ol class="previousSearchesList">
+      </ol>
+    </div>
+    <div id="carInfo" class="col l6 m9 s12 carInfoBox">
+      <h3 class="U">Car Info</h3>
+      <div class="carInfoDiv">
+      </div>
     </div>
   </div>
-</footer>
+
+  <!--Footer-->
+  <footer class="page-footer green lighten-2">
+    <div class="container">
+      <div class="row">
+        <div class="col l6 m9 s12 ">
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container">
+        © 2020 Car Amplify
+        <a class="grey-text text-lighten-4 right" href="https://github.com/cfech/NewProject2">Link to GitHub
+          Repository</a>
+      </div>
+    </div>
+  </footer>
+</body>

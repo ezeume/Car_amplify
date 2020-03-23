@@ -63,6 +63,8 @@ $('#searchButton').on('click', function (event) {
   var make = $("#make option:selected").text()
   var model = document.getElementById('model').value;
 
+  var noWhiteSpaceMake = make.replace(" ", "")
+  var noWhiteSpaceModel = model.replace(" ", "")
   //Validation for selecting criteria
   if (!make || !year || !model) {
     $(".errorMessage").removeClass("hide")
@@ -70,8 +72,7 @@ $('#searchButton').on('click', function (event) {
     $(".errorMessage").addClass("hide")
 
     //ajax call for getting car model data 
-    var carQueryURL = `https://vpic.nhtsa.dot.gov/api/vehicles/GetCanadianVehicleSpecifications/?Year=2018&Make=${make}&Model=${model}&units=US&format=json`;
-    console.log(carQueryURL)
+    var carQueryURL = `https://vpic.nhtsa.dot.gov/api/vehicles/GetCanadianVehicleSpecifications/?Year=2018&Make=${noWhiteSpaceMake}&Model=${noWhiteSpaceModel}&units=US&format=json`;
     $.ajax({
       url: carQueryURL,
       method: 'GET',
