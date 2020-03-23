@@ -47,7 +47,7 @@ function loadAjax() {
       previousSearchDiv.text("Year: " + data1[i].year + " Make: " + data1[i].make + " Model: " + data1[i].model)
       // var redoBtn = $("<button>").addClass("redoButton")
       // redoBtn.text("redo")
-      previousSearchLi.append(previousSearchDiv,)
+      previousSearchLi.append(previousSearchDiv)
       $(".previousSearchesList").append(previousSearchLi)
     }
   });
@@ -63,6 +63,8 @@ $('#searchButton').on('click', function (event) {
   var make = $("#make option:selected").text()
   var model = document.getElementById('model').value;
 
+  var noWhiteSpaceMake = make.replace(" ", "")
+  var noWhiteSpaceModel = model.replace(" ", "")
   //Validation for selecting criteria
   if (!make || !year || !model) {
     $(".errorMessage").removeClass("hide")
@@ -70,8 +72,7 @@ $('#searchButton').on('click', function (event) {
     $(".errorMessage").addClass("hide")
 
     //ajax call for getting car model data 
-    var carQueryURL = `https://vpic.nhtsa.dot.gov/api/vehicles/GetCanadianVehicleSpecifications/?Year=2018&Make=${make}&Model=${model}&units=US&format=json`;
-    console.log(carQueryURL)
+    var carQueryURL = `https://vpic.nhtsa.dot.gov/api/vehicles/GetCanadianVehicleSpecifications/?Year=2018&Make=${noWhiteSpaceMake}&Model=${noWhiteSpaceModel}&units=US&format=json`;
     $.ajax({
       url: carQueryURL,
       method: 'GET',
@@ -79,7 +80,7 @@ $('#searchButton').on('click', function (event) {
       $(".carInfoDiv").empty()
       var arrayLength = data.Results.length
       let j = 1
-      
+
       //for loop to create car info div
       for (let i = 0; i < arrayLength; i++) {
         let itemId = j++
@@ -198,7 +199,7 @@ $('#searchButton').on('click', function (event) {
 
     //Ajax call for getting car picture with bing api
     $(".carmakeimage").empty();
-    picture = make + model +"20"+year
+    picture = make + model + "20" + year
     const cors_anywhere = "https://cors-anywhere.herokuapp.com/"
     let otherKey = "9760a4c7d4d94a39b2ff9055fbe79c30";
     $.ajax({
