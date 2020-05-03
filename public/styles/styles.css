@@ -55,7 +55,7 @@ img {
 }
 
 .indexBody {
-  background: lightgoldenrodyellow !important;
+  background: rgb(231, 231, 230) !important;
   width: 100%;
   margin: auto;
   position: relative;
