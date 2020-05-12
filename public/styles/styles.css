@@ -46,7 +46,8 @@
 }
 
 .U {
-  text-decoration: underline;
+  font-weight: bold;
+  color: rgb(76, 161, 211); 
 }
 
 img {
@@ -86,7 +87,7 @@ p {
 }
 
 #date {
-  font-family: "Oswald", sans-serif;
+  /* font-family: "Oswald", sans-serif; */
   font-style: Arial;
   font-size: 30px;
 }

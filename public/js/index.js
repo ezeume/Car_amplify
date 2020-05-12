@@ -65,6 +65,7 @@ $('#searchButton').on('click', function (event) {
 
   var noWhiteSpaceMake = make.replace(" ", "")
   var noWhiteSpaceModel = model.replace(" ", "")
+  
   //Validation for selecting criteria
   if (!make || !year || !model) {
     $(".errorMessage").removeClass("hide")
