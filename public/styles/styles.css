@@ -55,7 +55,10 @@ img {
 }
 
 .indexBody {
-  background: rgb(223, 233, 240) !important;
+  background: url("https://images.pexels.com/photos/982104/pexels-photo-982104.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500") 70% no-repeat;
+  background-size: cover;
+
+  /* background: rgb(223, 233, 240) !important; */
   width: 100%;
   margin: auto;
   position: relative;
