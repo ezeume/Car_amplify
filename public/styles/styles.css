@@ -1,3 +1,4 @@
+/* Index handlebars styling */
 
 .list-group-item {
   line-height: 2.5;
@@ -134,44 +135,4 @@ h3 {
   margin-right: auto;
   width: 50%;
 }
-
-/* .redoButton {
-  text-align: center;
-  background-color: #435c6b;
-  padding: 10px;
-} */
-
-/* button {
-  text-align: center;
-  padding: 10px 10px;
-} */
-
-/* .btn {
-  background-color: #435c6b;
-  padding: 10px;
-} */
-
-/* .btn:hover {
-  background: #435c6b;
-} */
-
-/* ul {
-  text-align: center;
-  font-size: 25px;
-  font-family: "Fjalla One" sans-serif;
-} */
-
-/* .col {
-  column-width: 250px;
-  column-gap: 25in;
-  padding: 15px 15px;
-  margin: auto;
-} */
-
-/* footer {
-  margin: auto;
-  width: 100%;
-  position: sticky;
-} */
-
-/*add some css 
+ 
