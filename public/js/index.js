@@ -45,8 +45,6 @@ function loadAjax() {
       var previousSearchLi = $("<li>").addClass("previousSearchLi")
       var previousSearchDiv = $("<div>").addClass("previousSearchDiv")
       previousSearchDiv.text("Year: " + data1[i].year + " Make: " + data1[i].make + " Model: " + data1[i].model)
-      // var redoBtn = $("<button>").addClass("redoButton")
-      // redoBtn.text("redo")
       previousSearchLi.append(previousSearchDiv)
       $(".previousSearchesList").append(previousSearchLi)
     }
@@ -203,7 +201,7 @@ $('#searchButton').on('click', function (event) {
     $(".carmakeimage").empty();
     picture = make + model + "20" + year
     const cors_anywhere = "https://cors-anywhere.herokuapp.com/"
-    let otherKey = "9760a4c7d4d94a39b2ff9055fbe79c30";
+    let otherKey = "a9ab06b245014432b2de83fcfb836a28";
     $.ajax({
       url: cors_anywhere + "https://api.cognitive.microsoft.com/bing/v7.0/images/search?q=" + picture,
       method: "GET",
